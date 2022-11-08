@@ -1,9 +1,20 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>Inicio</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div>
+  <ion-button color="secondary"[routerLink]="['/calculadora']">Calculadora</ion-button>
+  <ion-button color="tertiary"[routerLink]="['/calendario']">Calendario</ion-button>
+</div>
+<div>
+  <ion-button color="success"[routerLink]="['/recetario']">Recetario</ion-button>
+  <ion-button color="warning"[routerLink]="['/comunidad']">Comunidad</ion-button>
+</div>
+<div>
+  <ion-button color="danger"[routerLink]="['/lista-mercado']">Lista Mercado</ion-button>
+  <ion-button color="dark"[routerLink]="['/mapa']">Mapa</ion-button>
+</div>
 </ion-content>

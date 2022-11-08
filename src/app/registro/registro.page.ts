@@ -17,11 +17,11 @@ export class RegistroPage implements OnInit {
   formularioRegistro: FormGroup;
 
   constructor(public fb: FormBuilder,
-    public alertController: AlertController) { 
+    public alertController: AlertController) {
     this.formularioRegistro = this.fb.group({
-      "nombre" : new FormControl("",Validators.required),
-      "password" : new FormControl("",Validators.required),
-      "confirmacionPassword" : new FormControl("",Validators.required)
+      'nombre' : new FormControl("",Validators.required),
+      'password' : new FormControl("",Validators.required),
+      'confirmacionPassword' : new FormControl("",Validators.required)
     });
   }
 
@@ -33,13 +33,21 @@ export class RegistroPage implements OnInit {
 
     if(this.formularioRegistro.invalid){
       const alert = await this.alertController.create({
-        message: "Todos los campos son obligatorios",
-        buttons: ["Aceptar"]
+        header: 'Campos incompletos',
+        message: 'Todos los campos son obligatorios.',
+        buttons: ['Aceptar']
       });
 
       await alert.present();
       return;
     }
+
+    var usuario = {
+      nombre: f.nombre,
+      password: f.password,
+    }
+
+    localStorage.setItem('usuario',JSON.stringify(usuario));
   }
 
 }

@@ -19,7 +19,32 @@ const routes: Routes = [
   {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'calculadora',
+    loadChildren: () => import('./calculadora/calculadora.module').then( m => m.CalculadoraPageModule)
+  },
+  {
+    path: 'mapa',
+    loadChildren: () => import('./mapa/mapa.module').then( m => m.MapaPageModule)
+  },
+  {
+    path: 'comunidad',
+    loadChildren: () => import('./comunidad/comunidad.module').then( m => m.ComunidadPageModule)
+  },
+  {
+    path: 'calendario',
+    loadChildren: () => import('./calendario/calendario.module').then( m => m.CalendarioPageModule)
+  },
+  {
+    path: 'lista-mercado',
+    loadChildren: () => import('./lista-mercado/lista-mercado.module').then( m => m.ListaMercadoPageModule)
+  },
+  {
+    path: 'recetario',
+    loadChildren: () => import('./recetario/recetario.module').then( m => m.RecetarioPageModule)
   }
+
 ];
 
 @NgModule({
