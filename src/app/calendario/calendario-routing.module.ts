@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, OnInit, ViewChild } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CalendarComponent, NgCalendarModule } from 'ionic2-calendar';
+import { CalendarioPageModule } from './calendario.module';
 
 import { CalendarioPage } from './calendario.page';
 
