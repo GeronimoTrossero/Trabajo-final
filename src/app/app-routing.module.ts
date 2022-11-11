@@ -43,7 +43,9 @@ const routes: Routes = [
   {
     path: 'recetario',
     loadChildren: () => import('./recetario/recetario.module').then( m => m.RecetarioPageModule)
-  }
+  },
+  
+
 
 ];
 
