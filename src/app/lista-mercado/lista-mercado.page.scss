@@ -1,0 +1,15 @@
+ion-textarea.custom-textarea {
+    --background: #c7fa5a;
+    --color: #fff;
+    --padding-end: 10px;
+    --padding-start: 10px;
+    --placeholder-color: #ddd;
+    --placeholder-opacity: 0.8;
+    height: 200px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.input{
+    position: right;
+}
