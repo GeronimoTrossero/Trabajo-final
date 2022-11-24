@@ -20,14 +20,14 @@
        </ion-item>   
         <ion-item>
          <ion-label position="floating">Contraseña</ion-label>
-         <ion-input fromControlName="password" type="password" ></ion-input>
+         <ion-input formControlName="password" type="password" ></ion-input>
        </ion-item>
        <ion-item>
         <ion-label position="floating">Confirmar contraseña</ion-label>
-        <ion-input fromControlName="confirmacionPassword" type="password"></ion-input>
+        <ion-input formControlName="confirmacionPassword" type="password"></ion-input>
        </ion-item>
       <br>
-      <ion-button [routerLink]="['/inicio']"(click)="guardar()">Registrarse
+      <ion-button [disabled]="formularioRegistro.invalid" [routerLink]="['/inicio']"(click)="guardar()">Registrarse
       </ion-button>
       </form>
     </ion-card-content>
