@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { RecetaService } from '../services/receta.service';
 @Component({
   selector: 'app-recetario',
   templateUrl: './recetario.page.html',
@@ -9,28 +9,12 @@ export class RecetarioPage implements OnInit {
 
 lista: string[];
 
-  constructor() { 
-  this.inicializar();
+  constructor( private recetaService: RecetaService  ) { 
+  this.recetaService.getRecetas();
 }
 
-  inicializar(){
-    this.lista = [
-      'aceite',
-      'calabaza',
-      'queso',
-      'sal',
-      'pimienta',
-      'oliva',
-      'berros',
-      'limón',
-      'lechuga',
-      'chile',
-      'frijol',
-      'jitomates',
-      'tortillas',
-      'miel',
-    ];
-  }
+  
+  
 
 
 
