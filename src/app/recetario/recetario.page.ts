@@ -7,9 +7,33 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecetarioPage implements OnInit {
 
-  constructor() { }
+lista: string[];
+
+  constructor() { 
+  this.inicializar();
+}
+
+  inicializar(){
+    this.lista = [
+      'aceite',
+      'calabaza',
+      'queso',
+      'sal',
+      'pimienta',
+      'oliva',
+      'berros',
+      'limón',
+      'lechuga',
+      'chile',
+      'frijol',
+      'jitomates',
+      'tortillas',
+      'miel',
+    ];
+  }
+
+
 
   ngOnInit() {
   }
-
 }
