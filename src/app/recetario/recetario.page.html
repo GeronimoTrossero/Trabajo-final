@@ -8,14 +8,38 @@
     </ion-button>
     <ion-title>Recetario</ion-title>
   </ion-toolbar>
+
+<ion-toolbar color="success">
+<ion-searchbar placeholder="Buscar ingrediente....."
+animated
+(ionChange)="buscarIngrediente( $event )">  </ion-searchbar>
+</ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>
 
   <ion-list>
 
-    <ion-item>
-      <ion-label>Peperoni</ion-label>
+    <ion-item *ngFor="let receta of recetas">
+      <ion-label>
+        <h1>
+          {{receta.nombre}}
+        </h1>
+        <h2>
+          Ingredientes
+        </h2>
+        <h3>
+           {{receta.ingredientes}}
+        </h3>
+        <h4>
+          Pasos
+        </h4>
+        <h5>
+          {{receta.pasos}}
+        </h5>
+      </ion-label>
     </ion-item>
   </ion-list>
 </ion-content>
