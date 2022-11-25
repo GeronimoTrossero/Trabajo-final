@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RecetaService } from '../services/receta.service';
+import { RecetaService } from '../../services/receta.service';
 import { Receta } from '../models/recetas.model';
 
 @Component({
@@ -11,9 +11,6 @@ export class RecetarioPage implements OnInit {
   textoBuscar = '';
   recetas: Receta [] = [];
   constructor( private recetaService: RecetaService  ) { 
-
-
-
 
   this.recetaService.getRecetas()
   .subscribe(resp=> this.recetas =resp);
