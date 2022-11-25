@@ -22,7 +22,7 @@ animated
 
   <ion-list>
 
-    <ion-item *ngFor="let receta of recetas">
+    <ion-item *ngFor="let receta of recetas | filtro:textoBuscar">
       <ion-label>
         <h1>
           {{receta.nombre}}

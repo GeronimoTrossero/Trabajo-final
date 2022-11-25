@@ -8,6 +8,7 @@ import { Receta } from '../models/recetas.model';
   styleUrls: ['./recetario.page.scss'],
 })
 export class RecetarioPage implements OnInit {
+  textoBuscar = '';
   recetas: Receta [] = [];
   constructor( private recetaService: RecetaService  ) { 
 
@@ -19,7 +20,9 @@ export class RecetarioPage implements OnInit {
 }
 buscarIngrediente( event ){
 
-  console.log(event);
+
+const texto = event.target.value;
+this.textoBuscar = texto;
 
 }
   

@@ -7,9 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { RecetarioPageRoutingModule } from './recetario-routing.module';
 
 import { RecetarioPage } from './recetario.page';
+import { PipesModule } from '../pipes/pipes.module';
 
 @NgModule({
   imports: [
+    PipesModule,
     CommonModule,
     FormsModule,
     IonicModule,
