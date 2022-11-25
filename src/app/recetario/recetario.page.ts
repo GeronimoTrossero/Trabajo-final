@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RecetaService } from '../../services/receta.service';
 import { Receta } from '../models/recetas.model';
 
+
 @Component({
   selector: 'app-recetario',
   templateUrl: './recetario.page.html',
@@ -22,11 +23,6 @@ const texto = event.target.value;
 this.textoBuscar = texto;
 
 }
-  
-  
-
-  
-
   ngOnInit() {
   }
 }

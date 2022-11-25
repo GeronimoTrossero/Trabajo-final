@@ -10,12 +10,14 @@ import { AlertController } from '@ionic/angular';
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
 
 
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.page.html',
   styleUrls: ['./registro.page.scss'],
 })
-export class RegistroPage implements OnInit {
+
+export class RegistroPage implements OnInit  {
 
 
   formularioRegistro: FormGroup;
@@ -57,6 +59,8 @@ export class RegistroPage implements OnInit {
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
   }
+
+  
   
 
 }
