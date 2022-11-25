@@ -117,3 +117,12 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+@font-face {
+  font-family: Pacifico;
+  src: url('../assets/fonts/pacifico.woff2');
+}
+
+body, h1, h2, h3, h4, h5, ion-item, ion-title {
+  font-family: Pacifico;
+}
+
