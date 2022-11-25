@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, Validators } from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 
 @Component({
@@ -7,8 +8,11 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./agreag-recetas.page.scss'],
 })
 export class AgreagRecetasPage implements OnInit {
+  boton: any;
+  agregarRec: any;
 
-  constructor(private alertController: AlertController) {}
+  constructor(
+    private alertController: AlertController) {}
 
   async presentAlert() {
     const alert = await this.alertController.create({
@@ -22,5 +26,6 @@ export class AgreagRecetasPage implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }
