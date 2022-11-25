@@ -14,8 +14,8 @@ export class RecetaService {
     return this.http.get<Receta[]>('http://localhost:8080/receta');
     
   }
-  postRecetas(){
-  this.http.post<Receta[]>('http://localhost:8080/receta', this.receta).subscribe((res:any)=>{
+  postRecetas(receta){
+  return this.http.post<Receta[]>('http://localhost:8080/receta', receta).subscribe((res:any)=>{
     console.log(res);
    } );
 }

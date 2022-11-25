@@ -25,13 +25,17 @@ export class AgreagRecetasPage implements OnInit {
   agregarRec: any;
 
   constructor(
-    private alertController: AlertController, private recetaService: RecetaService ) {
-      this.recetaService.postRecetas()
+    private alertController: AlertController, private recetaService: RecetaService,) {
+      
 
     
     }
     
-
+    Submit(){
+      this.recetaService.postRecetas(this.receta)
+      }
+    
+  
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Genial',
@@ -45,9 +49,8 @@ export class AgreagRecetasPage implements OnInit {
     
   ngOnInit() {
   }
-Submit(){
-  this.receta.postRecetas
-}
+
+
     
   
 
