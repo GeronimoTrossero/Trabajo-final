@@ -43,7 +43,23 @@ const routes: Routes = [
   {
     path: 'recetario',
     loadChildren: () => import('./recetario/recetario.module').then( m => m.RecetarioPageModule)
+  },  {
+    path: 'inbox',
+    loadChildren: () => import('./pages/inbox/inbox.module').then( m => m.InboxPageModule)
   },
+  {
+    path: 'outbox',
+    loadChildren: () => import('./pages/outbox/outbox.module').then( m => m.OutboxPageModule)
+  },
+  {
+    path: 'spam',
+    loadChildren: () => import('./pages/spam/spam.module').then( m => m.SpamPageModule)
+  },
+  {
+    path: 'log',
+    loadChildren: () => import('./pages/log/log.module').then( m => m.LogPageModule)
+  },
+
   
 
 

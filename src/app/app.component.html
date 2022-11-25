@@ -1,29 +1,32 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>SoyVeggie</ion-list-header>
-          <ion-note>Somos una aplicacion orientada a la comunidad vegetariana para facilitarle la vida</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-    <ion-router-outlet id="main-content"></ion-router-outlet>
-  </ion-split-pane>
+  <ion-menu menuId="main-menu" content-id="main">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <iol-list>
+        <ion-item>
+          <ion-icon name="compass" slot="start"></ion-icon>
+          <ion-label>Localización</ion-label>
+          <h2 end="start" class="rosario">Rosario</h2>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="finger-print" slot="start"></ion-icon>
+          <ion-label>Privacidad</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="build" slot="start"></ion-icon>
+          <ion-label>Versión</ion-label>
+          <h3 class="rosario">0.0.1</h3>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="person" slot="start"></ion-icon><ion-label>Cerrar Sesión</ion-label>
+          <ion-button end="start" color="secondary" class="salir" [routerLink]="['/login']">Salir</ion-button>
+        </ion-item>
+      </iol-list> 
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
