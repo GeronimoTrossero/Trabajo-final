@@ -3,7 +3,8 @@ import{
   FormGroup,
   FormControl,
   Validators,
-  FormBuilder
+  FormBuilder,
+  NgForm
 } from "@angular/forms";
 import { AlertController } from '@ionic/angular';
 import { AbstractControl, ValidationErrors, ValidatorFn } from '@angular/forms';
@@ -18,6 +19,8 @@ export class RegistroPage implements OnInit {
 
 
   formularioRegistro: FormGroup;
+  form: any;
+  matching_passwords_group: FormGroup<{ password: FormControl<string>; confirm_password: FormControl<string>; }>;
 
   constructor(public fb: FormBuilder,
     public alertController: AlertController) {
@@ -25,9 +28,10 @@ export class RegistroPage implements OnInit {
       'nombre' : new FormControl("",Validators.required),
       'password' : new FormControl("",Validators.required),
       'confirmacionPassword' : new FormControl("",Validators.required)
-    } ,[CustomValidators.MatchValidator('password', 'confirmacionPassword')]
+    } 
     );
   }
+  
 
   ngOnInit() {
   }
@@ -53,17 +57,9 @@ export class RegistroPage implements OnInit {
 
     localStorage.setItem('usuario',JSON.stringify(usuario));
   }
+  
 
 }
-export class CustomValidators {
-  static MatchValidator(source: string, target: string): ValidatorFn {
-    return (control: AbstractControl): ValidationErrors | null => {
-      const sourceCtrl = control.get(source);
-      const targetCtrl = control.get(target);
 
-      return sourceCtrl && targetCtrl && sourceCtrl.value !== targetCtrl.value
-        ? { mismatch: true }
-        : null;
-    };
-  }
-}
+  
+

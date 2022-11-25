@@ -43,7 +43,8 @@ const routes: Routes = [
   {
     path: 'recetario',
     loadChildren: () => import('./recetario/recetario.module').then( m => m.RecetarioPageModule)
-  },  {
+  },
+  {
     path: 'inbox',
     loadChildren: () => import('./pages/inbox/inbox.module').then( m => m.InboxPageModule)
   },
@@ -59,8 +60,11 @@ const routes: Routes = [
     path: 'log',
     loadChildren: () => import('./pages/log/log.module').then( m => m.LogPageModule)
   },
-
   
+  {
+    path: 'agreag-recetas',
+    loadChildren: () => import('./agreag-recetas/agreag-recetas.module').then( m => m.AgreagRecetasPageModule)
+  },
 
 
 ];

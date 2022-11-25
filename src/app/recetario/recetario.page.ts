@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class RecetarioPage implements OnInit {
 
 lista: string[];
+  button: any;
+  alertController: any;
 
   constructor() { 
   this.inicializar();
@@ -32,7 +34,7 @@ lista: string[];
     ];
   }
 
-
+  
 
   ngOnInit() {
   }
